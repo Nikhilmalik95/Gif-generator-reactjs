@@ -12,7 +12,7 @@ function Tag() {
 
     const { err ,gif, loading, fetchData } = useGif(tag);
     return (
-        <div className="w-1/2  bg-violet-200 rounded-lg border border-black flex flex-col items-center gap-y-5 mt-[15px]">
+        <div className="w-11/12 md:w-2/3 lg:1/3  bg-violet-200 rounded-lg border border-black flex flex-col items-center gap-y-5 mt-[15px]">
             <h1 className=" mt-[15px] text-2xl underline uppercase font-bold">Random {tag} Gif</h1>
             
             { err ? (loading ? (<Spinner />) : (<ErrorHandler />)) :(loading ? (<Spinner />) : (<img src={gif} width={450} alt="gif" />))}
